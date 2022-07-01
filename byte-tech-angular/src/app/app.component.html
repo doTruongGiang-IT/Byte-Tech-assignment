@@ -1,0 +1,9 @@
+<div class="calculator">
+  <div class='calculator-output'>
+    <p class='calculator-output__previous'>{{ previousExpression }}</p>
+    <p id="calculator-output__current" class='calculator-output__current'>{{ mathExpression ? mathExpression : 0 }}</p>
+  </div>
+  <ng-container *ngFor="let button of buttons">
+    <button [class]="button.class" (click)="setExpression(button.value)">{{ button.label }}</button>
+  </ng-container>
+</div>
